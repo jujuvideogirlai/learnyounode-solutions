@@ -9,6 +9,6 @@ const ext = process.argv[3]
 fs.readdir(dirPath, (err, list) => {
   if (err) return console.error(err)
 
-  list.filter(file => path.extname(file) === `.${ext}`)
+  list = list.filter(file => path.extname(file) === `.${ext}`)
     .forEach(file => console.log(file))
 })
